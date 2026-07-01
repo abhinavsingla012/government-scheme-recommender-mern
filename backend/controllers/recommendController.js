@@ -1,7 +1,4 @@
-/**
- * Recommendation Controller
- * Uses the recommender engine to return personalized scheme suggestions
- */
+
 const Scheme = require('../models/Scheme');
 const { recommendSchemes } = require('../utils/recommender');
 

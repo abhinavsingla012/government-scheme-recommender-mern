@@ -1,7 +1,4 @@
-/**
- * Database Configuration Module
- * Handles MongoDB connection using Mongoose
- */
+
 const mongoose = require('mongoose');
 
 const connectDB = async () => {

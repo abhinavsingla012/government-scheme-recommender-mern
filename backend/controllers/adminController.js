@@ -1,7 +1,4 @@
-/**
- * Admin Controller
- * Admin-only operations: CRUD schemes, view users (with per-user detail), dashboard stats
- */
+
 const Scheme = require('../models/Scheme');
 const User = require('../models/User');
 const { recommendSchemes } = require('../utils/recommender');

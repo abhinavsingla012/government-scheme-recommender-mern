@@ -1,7 +1,4 @@
-/**
- * Auth Controller
- * Handles user registration, login, and current user retrieval
- */
+
 const User = require('../models/User');
 const { hashPassword, verifyPassword } = require('../utils/password');
 const { createToken } = require('../utils/jwt');

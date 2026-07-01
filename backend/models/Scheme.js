@@ -1,7 +1,4 @@
-/**
- * Scheme Model
- * Represents a government scheme / subsidy / welfare program
- */
+
 const mongoose = require('mongoose');
 
 const eligibilitySchema = new mongoose.Schema(
