@@ -22,7 +22,9 @@ const PORT = process.env.PORT || 8001;
 // Middleware
 app.use(
   cors({
-    origin: (process.env.CORS_ORIGINS || '*').split(','),
+    origin: process.env.CORS_ORIGINS && process.env.CORS_ORIGINS !== '*'
+      ? process.env.CORS_ORIGINS.split(',')
+      : '*',
     credentials: false,
   })
 );
