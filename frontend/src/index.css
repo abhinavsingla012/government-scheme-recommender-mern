@@ -1,0 +1,345 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Standard, accessible fonts used by real Indian government portals */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Noto+Serif:wght@400;600;700&display=swap");
+
+:root {
+    --gov-blue: #1a4b8c;
+    --gov-blue-dark: #0d3568;
+    --gov-blue-hover: #163f78;
+    --gov-saffron: #ff6b00;
+    --gov-saffron-hover: #e55f00;
+    --gov-green: #138808;
+    --gov-bg: #f4f1eb;
+    --gov-card-bg: #ffffff;
+    --gov-border: #d4cfc4;
+    --gov-text: #1c1c1c;
+    --gov-text-muted: #4a4a4a;
+    --gov-link: #0d3568;
+}
+
+body {
+    margin: 0;
+    font-family:
+        "Noto Sans",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--gov-text);
+    background-color: var(--gov-bg);
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-heading {
+    font-family: "Noto Serif", "Times New Roman", serif;
+    font-weight: 700;
+    color: var(--gov-blue-dark);
+}
+
+/* Tricolor strip */
+.gov-tricolor {
+    display: flex;
+    height: 4px;
+    width: 100%;
+}
+.gov-tricolor > div {
+    flex: 1;
+}
+.gov-tricolor > div:nth-child(1) {
+    background: #ff6b00;
+}
+.gov-tricolor > div:nth-child(2) {
+    background: #ffffff;
+}
+.gov-tricolor > div:nth-child(3) {
+    background: #138808;
+}
+
+/* Top government strip */
+.gov-top-strip {
+    background: #0d3568;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 0;
+}
+
+/* Container */
+.container-gov {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+@media (min-width: 768px) {
+    .container-gov {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+/* Buttons - larger, clearly labeled */
+.btn-primary {
+    background-color: var(--gov-saffron);
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--gov-saffron);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: background-color 0.15s;
+    text-decoration: none;
+    min-height: 44px;
+}
+.btn-primary:hover {
+    background-color: var(--gov-saffron-hover);
+    border-color: var(--gov-saffron-hover);
+}
+.btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn-secondary {
+    background-color: var(--gov-blue);
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--gov-blue);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: background-color 0.15s;
+    text-decoration: none;
+    min-height: 44px;
+}
+.btn-secondary:hover {
+    background-color: var(--gov-blue-hover);
+    border-color: var(--gov-blue-hover);
+}
+
+.btn-outline {
+    background: #fff;
+    color: var(--gov-blue-dark);
+    border: 1px solid var(--gov-blue-dark);
+    font-weight: 600;
+    font-size: 15px;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.15s;
+    text-decoration: none;
+    min-height: 44px;
+}
+.btn-outline:hover {
+    background: #f0f4fa;
+}
+
+/* Form inputs */
+.gov-input {
+    width: 100%;
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 0.625rem 0.875rem;
+    background: #fff;
+    color: var(--gov-text);
+    font-family: inherit;
+    font-size: 15px;
+    min-height: 42px;
+}
+.gov-input:focus {
+    outline: 2px solid var(--gov-saffron);
+    outline-offset: 1px;
+    border-color: var(--gov-saffron);
+}
+
+.gov-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1c1c1c;
+    margin-bottom: 0.375rem;
+}
+.gov-label .required {
+    color: #cc0000;
+    margin-left: 3px;
+}
+
+/* Cards - simple, bordered, low decoration */
+.gov-card {
+    background: var(--gov-card-bg);
+    border: 1px solid var(--gov-border);
+    border-radius: 4px;
+}
+
+/* Section heading standard */
+.section-heading {
+    font-family: "Noto Serif", serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--gov-blue-dark);
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--gov-saffron);
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+/* Text link */
+.gov-link {
+    color: var(--gov-link);
+    text-decoration: underline;
+    font-weight: 500;
+}
+.gov-link:hover {
+    color: var(--gov-saffron);
+}
+
+/* Status badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem 0.625rem;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid;
+}
+.badge-eligible {
+    background-color: #e8f5e9;
+    color: #1b5e20;
+    border-color: #a5d6a7;
+}
+.badge-partial {
+    background-color: #fff3e0;
+    color: #b95000;
+    border-color: #ffcc80;
+}
+.badge-low {
+    background-color: #fce8e8;
+    color: #b71c1c;
+    border-color: #ef9a9a;
+}
+
+/* Data table */
+.gov-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    font-size: 14px;
+}
+.gov-table th {
+    background: #0d3568;
+    color: #fff;
+    text-align: left;
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+.gov-table th:last-child {
+    border-right: none;
+}
+.gov-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e5e2dc;
+    border-right: 1px solid #f0ede7;
+    vertical-align: middle;
+}
+.gov-table td:last-child {
+    border-right: none;
+}
+.gov-table tbody tr:nth-child(even) {
+    background: #faf8f4;
+}
+.gov-table tbody tr:hover {
+    background: #fff7ec;
+}
+
+/* Loader */
+.gov-spinner {
+    width: 36px;
+    height: 36px;
+    border: 3px solid #e5e2dc;
+    border-top-color: var(--gov-saffron);
+    border-radius: 50%;
+    animation: spin 0.9s linear infinite;
+}
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Selection */
+::selection {
+    background: #ffe0b3;
+    color: #0d3568;
+}
+
+/* Focus visible for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--gov-saffron);
+    outline-offset: 2px;
+}
+
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 0 0% 3.9%;
+        --card: 0 0% 100%;
+        --card-foreground: 0 0% 3.9%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 0 0% 3.9%;
+        --primary: 0 0% 9%;
+        --primary-foreground: 0 0% 98%;
+        --secondary: 0 0% 96.1%;
+        --secondary-foreground: 0 0% 9%;
+        --muted: 0 0% 96.1%;
+        --muted-foreground: 0 0% 45.1%;
+        --accent: 0 0% 96.1%;
+        --accent-foreground: 0 0% 9%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 0 0% 89.8%;
+        --input: 0 0% 89.8%;
+        --ring: 0 0% 3.9%;
+        --radius: 0.25rem;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+}
