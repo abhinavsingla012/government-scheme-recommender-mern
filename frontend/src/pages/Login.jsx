@@ -78,15 +78,6 @@ const Login = () => {
           </div>
         </div>
 
-        {/* Demo credentials */}
-        <div className="mt-4 border border-[#a5cbe8] bg-[#eaf3fb] px-4 py-3 rounded flex items-start gap-2 text-sm text-[#0d3568]">
-          <Info className="w-4 h-4 flex-shrink-0 mt-0.5" />
-          <div>
-            <strong>Demo Admin Login:</strong><br />
-            Email: <code>admin@scheme.gov.in</code><br />
-            Password: <code>Admin@123</code>
-          </div>
-        </div>
       </div>
     </div>
   );
