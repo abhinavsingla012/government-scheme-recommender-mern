@@ -15,6 +15,7 @@ import SchemeDetail from "./pages/SchemeDetail";
 import AdminDashboard from "./pages/AdminDashboard";
 import UserDashboard from "./pages/UserDashboard";
 import AdminUserDetail from "./pages/AdminUserDetail";
+import Chatbot from "./components/Chatbot";
 
 function App() {
   return (
@@ -72,6 +73,7 @@ function App() {
             </Routes>
           </main>
           <Footer />
+          <Chatbot />
           <Toaster position="top-right" richColors />
         </div>
       </BrowserRouter>

@@ -15,6 +15,7 @@ const profileRoutes = require('./routes/profileRoutes');
 const schemeRoutes = require('./routes/schemeRoutes');
 const recommendRoutes = require('./routes/recommendRoutes');
 const adminRoutes = require('./routes/adminRoutes');
+const chatbotRoutes = require('./routes/chatbotRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 8001;
@@ -45,6 +46,7 @@ app.use('/api/profile', profileRoutes);
 app.use('/api/schemes', schemeRoutes);
 app.use('/api/recommendations', recommendRoutes);
 app.use('/api/admin', adminRoutes);
+app.use('/api/chatbot', chatbotRoutes);
 
 // 404
 app.use((req, res) => {

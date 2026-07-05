@@ -206,11 +206,10 @@ const AdminDashboard = () => {
             key={k}
             onClick={() => changeTab(k)}
             data-testid={`admin-tab-${k}`}
-            className={`px-4 py-2.5 text-sm font-semibold flex items-center gap-2 border-b-2 -mb-px transition-colors ${
-              tab === k
+            className={`px-4 py-2.5 text-sm font-semibold flex items-center gap-2 border-b-2 -mb-px transition-colors ${tab === k
                 ? "border-[#ff6b00] text-[#0d3568]"
                 : "border-transparent text-[#4a4a4a] hover:text-[#0d3568]"
-            }`}
+              }`}
           >
             <Icon className="w-4 h-4" /> {label}
           </button>
